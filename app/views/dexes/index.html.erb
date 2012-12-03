@@ -1,0 +1,27 @@
+<h1>Listing dexes</h1>
+
+<table>
+  <tr>
+    <th>Owner</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dexes.each do |dex| %>
+  <tr>
+    <td><%= dex.owner %></td>
+    <td><%= dex.name %></td>
+    <td><%= dex.quantity %></td>
+    <td><%= link_to 'Show', dex %></td>
+    <td><%= link_to 'Edit', edit_dex_path(dex) %></td>
+    <td><%= link_to 'Destroy', dex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dex', new_dex_path %>

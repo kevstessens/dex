@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pokemon.name %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @pokemon.number %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @pokemon.type %>
+</p>
+
+<p>
+  <b>Stage:</b>
+  <%= @pokemon.stage %>
+</p>
+
+<p>
+  <b>Dex:</b>
+  <%= @pokemon.dex %>
+</p>
+
+<p>
+  <b>Captured:</b>
+  <%= @pokemon.captured %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @pokemon.owner %>
+</p>
+
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+<%= link_to 'Back', pokemons_path %>

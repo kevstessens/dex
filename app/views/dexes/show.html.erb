@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Owner:</b>
+  <%= @dex.owner %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @dex.name %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @dex.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_dex_path(@dex) %> |
+<%= link_to 'Back', dexes_path %>

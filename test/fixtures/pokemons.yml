@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  number: 1
+  type: 
+  stage: 1
+  dex: 
+  captured: false
+  owner: MyString
+
+two:
+  name: MyString
+  number: 1
+  type: 
+  stage: 1
+  dex: 
+  captured: false
+  owner: MyString

@@ -1,0 +1,29 @@
+<%= form_for(@dex) do |f| %>
+  <% if @dex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dex.errors.count, "error") %> prohibited this dex from being saved:</h2>
+
+      <ul>
+      <% @dex.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<h1>Listing pokemons</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Type</th>
+    <th>Stage</th>
+    <th>Dex</th>
+    <th>Captured</th>
+    <th>Owner</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pokemons.each do |pokemon| %>
+  <tr>
+    <td><%= pokemon.name %></td>
+    <td><%= pokemon.number %></td>
+    <td><%= pokemon.type %></td>
+    <td><%= pokemon.stage %></td>
+    <td><%= pokemon.dex %></td>
+    <td><%= pokemon.captured %></td>
+    <td><%= pokemon.owner %></td>
+    <td><%= link_to 'Show', pokemon %></td>
+    <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+    <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pokemon', new_pokemon_path %>
